@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[18]:
+# In[23]:
 
 
 # Python code to sort the lists using the second element of sublists 
@@ -55,6 +55,13 @@ for fname in files:
             intersection = intersections[streetname][1]
             if intersection not in schedule:
                 schedule[intersection] = [(streetname, 1)]
+            else:
+                foundstreet = False
+                for k in schedule[intersection]:
+                    if k[0] == streetname:
+                        foundstreet = True
+                if not foundstreet:
+                    schedule[intersection].append((streetname,1))
 
     ## print result
     result = []
