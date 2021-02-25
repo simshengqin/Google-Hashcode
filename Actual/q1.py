@@ -12,3 +12,14 @@ for i in range(V):
     cars.append(arr)
 print(intersections)
 print(cars)
+cars_position = []
+for i in range(V):
+    start_street = cars[i][1]
+    cars_position.append([start_street, intersections[start_street][2] + "/" + intersections[start_street][2]])
+traffic_lights = []
+# 1 is green
+for i in range(I):
+    traffic_lights.append(1)
+for t in range(D):
+    
+print(cars_position)
