@@ -8,15 +8,15 @@ for i in range(M):
     pizzas.append(tuple(input().split()))
 two_combi = []
 for i in range(len(pizzas)):
-    for j in range(i, len(pizzas)):
+    for j in range(i+1, len(pizzas)):
         #if i != j:
             pizza1 = pizzas[i]
             pizza2 = pizzas[j]
             two_combi.append([len(set(pizza1[1:] + pizza2[1:])),(i, j)])
 three_combi = []
 for i in range(len(pizzas)):
-    for j in range(i, len(pizzas)):
-        for k in range(j, len(pizzas)):
+    for j in range(i+1, len(pizzas)):
+        for k in range(j+1, len(pizzas)):
             # if i != j and j!= k and i != k:
             pizza1 = pizzas[i]
             pizza2 = pizzas[j]
@@ -24,9 +24,9 @@ for i in range(len(pizzas)):
             three_combi.append([len(set(pizza1[1:] + pizza2[1:] + pizza3[1:])),(i, j, k)])
 four_combi = []
 for i in range(len(pizzas)):
-    for j in range(i, len(pizzas)):
-        for k in range(j, len(pizzas)):
-            for x in range(k, len(pizzas)):
+    for j in range(i+1, len(pizzas)):
+        for k in range(j+1, len(pizzas)):
+            for x in range(k+1, len(pizzas)):
                 pizza1 = pizzas[i]
                 pizza2 = pizzas[j]
                 pizza3 = pizzas[k]
